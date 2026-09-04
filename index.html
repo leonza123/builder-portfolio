@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Builder portfolio and services">
+    <title>Igors Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div>
+                <p class="eyebrow">Construction & Renovation</p>
+                <h1>Igors Portfolio</h1>
+                <p class="header-subtitle"></p>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <button class="nav-button active" type="button" data-tab="portfolio">
+                    Portfolio
+                </button>
+                <button class="nav-button" type="button" data-tab="services">
+                    Services
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-container">
+        <section id="portfolio-section" class="tab-section active" aria-labelledby="portfolio-title">
+            <div class="section-heading">
+                <h2 id="portfolio-title">Portfolio</h2>
+                <p>
+                    Click any project to open its gallery.
+                </p>
+            </div>
+
+            <div id="portfolio" class="portfolio-grid"></div>
+        </section>
+
+        <section id="services-section" class="tab-section" aria-labelledby="services-title">
+            <div class="section-heading">
+                <p class="section-kicker">What can we offer</p>
+                <h2 id="services-title">Services</h2>
+                <p>
+                    Expand a category to see the available types of work.
+                </p>
+            </div>
+
+            <div id="services" class="services-list"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <strong>Builder Portfolio</strong>
+                <p>Construction, renovation and finishing work.</p>
+            </div>
+
+            <div class="footer-contact">
+                <a href="tel:+37100000000">+371 00 000 000</a>
+                <a href="mailto:builder@example.com">builder@example.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="image-modal" class="image-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button
+                id="modal-close"
+                class="modal-close"
+                type="button"
+                aria-label="Close image gallery"
+            >
+                &times;
+            </button>
+
+            <button
+                id="modal-previous"
+                class="modal-navigation modal-previous"
+                type="button"
+                aria-label="Previous image"
+            >
+                &#10094;
+            </button>
+
+            <figure class="modal-figure">
+                <img id="modal-image" src="" alt="">
+                <figcaption>
+                    <strong id="modal-title"></strong>
+                    <span id="modal-description"></span>
+                    <span id="modal-counter"></span>
+                </figcaption>
+            </figure>
+
+            <button
+                id="modal-next"
+                class="modal-navigation modal-next"
+                type="button"
+                aria-label="Next image"
+            >
+                &#10095;
+            </button>
+        </div>
+    </div>
+
+    <script src="js/portfolio-data.js"></script>
+    <script src="js/services-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
